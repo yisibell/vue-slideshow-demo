@@ -1,2 +1,2 @@
-# vue-slideshow
+# vue-slideshows
 a  slideshow component for vue.js 
