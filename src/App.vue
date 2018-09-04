@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slideshow @jump="go" :data="imgList" :isloop="false" />
+    <slideshow @jump="go" :data="imgList" :autoplay="false" />
   </div>
 </template>
 

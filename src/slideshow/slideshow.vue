@@ -1,6 +1,6 @@
 <template>
   <div class="carousel" :style="{width: w , height: h}">
-    <ul @mouseover="stop" @mouseout="isloop && loop()">
+    <ul @mouseover="stop" @mouseout="autoplay && loop()">
       <li v-for="(v,i) in data" :key="i" :style="{display: curr == i ? 'block' : 'none'}">
         <a href="javascript:;" @click="go(v)"><img :src="v.src" alt="图跑了" :title="v.title"></a>
       </li>
@@ -43,11 +43,11 @@ export default {
         return new Array({src: '../images/1.jpg' , title: "default"} , {src: '../images/2.jpg' , title: "default2"})
       }
     },
-    isloop: {
+    autoplay: {
       type: Boolean,
       default: true
     },
-    gap: {
+    interval: {
       type: Number,
       default: 2000
     },
@@ -61,7 +61,7 @@ export default {
   },
   created(){
     // 循环切换
-    this.isloop && this.loop()
+    this.autoplay && this.loop()
   },
   methods : {
     next(){
@@ -80,7 +80,7 @@ export default {
 
       this.timer = setInterval( ()=>{
         this.next()
-      } , this.gap )
+      } , this.interval )
 
     },
     stop(){

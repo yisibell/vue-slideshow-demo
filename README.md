@@ -56,8 +56,8 @@ export default {
 | w | String | 轮播图宽度 | 100% (默认) | 否 |
 | h | String | 轮播图高度 | 340px ( 默认) | 否 |
 | data | Array of object | 轮播数据 | 默认展示的本地测试图片 </br> 使用 `:data` 覆盖即可 | 是 |
-| isloop | Boolean | 是否开启自动循环轮播 | true (默认) | 否 |
-| gap | Number | 自动轮播间隔毫秒数 | 2000 (默认) | 否 |
+| autoplay | Boolean | 是否开启自动循环轮播 | true (默认) | 否 |
+| interval | Number | 自动轮播间隔毫秒数 | 2000 (默认) | 否 |
 
 **注意:**
 1. `:data` prop 必须是对象数组类型，且该对象中必须包含 `src` 字段 （图片地址）
