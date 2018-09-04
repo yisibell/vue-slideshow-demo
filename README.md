@@ -34,7 +34,11 @@ export default {
     return {
       imgList: [
         // the object must have `src` property
-        {title: "this is the img title" , src: "this is the img uri"}
+        // `title` : img 's title
+        // `src` : img 's src
+        {title: "defalut" , src: "./images/1.jpg"},
+        {title: "defalut2" , src: "./images/2.jpg"},
+        // ...
       ]
     }
   },
@@ -51,7 +55,7 @@ export default {
 | :----: | :----: | :----: | :----: | :----: |
 | w | String | 轮播图宽度 | 100% (默认) | 否 |
 | h | String | 轮播图高度 | 340px ( 默认) | 否 |
-| data | Array of object | 轮播数据 | [{ title: "default" , src: "./images/1.jpg"},</br>{ title: "default2" , src: "./images/2.jpg"}] (默认) | 是 |
+| data | Array of object | 轮播数据 | 默认展示的本地测试图片 </br> 使用 `:data` 覆盖即可 | 是 |
 | isloop | Boolean | 是否开启自动循环轮播 | true (默认) | 否 |
 
 **注意:**
