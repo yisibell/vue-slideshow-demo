@@ -47,11 +47,11 @@ export default {
 ```
 
 ## Properties
-| 属性 | 类型 | 说明 | 可选择 | 是否必须 |
+| 属性 | 类型 | 说明 | 可选值 | 是否必需 |
 | :----: | :----: | :----: | :----: | :----: |
 | w | String | 轮播图宽度 | 100% (默认) | 否 |
 | h | String | 轮播图高度 | 340px ( 默认) | 否 |
-| data | Array of object | 轮播数据 | [{ title: "default" , src: "./images/1.jpg"},</br>{ title: "default2" , src: "./images/2.jpg"}] | 是 |
+| data | Array of object | 轮播数据 | [{ title: "default" , src: "./images/1.jpg"},</br>{ title: "default2" , src: "./images/2.jpg"}] (默认) | 是 |
 | isloop | Boolean | 是否开启自动循环轮播 | true (默认) | 否 |
 
 **注意:**
