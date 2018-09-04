@@ -41,6 +41,10 @@ export default {
       default: function(){
         return new Array({src: '../images/1.jpg' , title: "default"} , {src: '../images/2.jpg' , title: "default2"})
       }
+    },
+    isloop: {
+      type: Boolean,
+      default: true
     }
     
   },
@@ -53,9 +57,8 @@ export default {
     this.data.forEach( (v,i) => {
       v.id = i;
     });
-
-    // 循环 切换
-    this.loop()
+     // 循环切换
+    this.isloop && this.loop()
   },
   methods : {
     next(){
@@ -154,7 +157,7 @@ export default {
         font-size : 24px;
         font-family: "simsun";
         color:#fff;
-        transition : all 1s;
+        transition : all .2s;
       }
 
     }
