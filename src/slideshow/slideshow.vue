@@ -1,6 +1,6 @@
 <template>
   <div class="carousel" :style="{width: w , height: h}">
-    <ul @mouseover="stop" @mouseout="loop">
+    <ul @mouseover="stop" @mouseout="isloop && loop()">
       <li v-for="(v,i) in data" :key="i" :style="{display: curr == i ? 'block' : 'none'}">
         <a href="javascript:;" @click="go(v)"><img :src="v.src" alt="图跑了" :title="v.title"></a>
       </li>
@@ -24,7 +24,8 @@ export default {
   data(){
     return {
       curr: 0,
-      timer: null
+      timer: null,
+      cardStyle: []
     }
   },
   props: {
@@ -49,19 +50,17 @@ export default {
     gap: {
       type: Number,
       default: 2000
-    }
+    },
     
   },
   computed: {
     dots : function(){
       return this.data.length;
-    }
+    },
+
   },
   created(){
-    this.data.forEach( (v,i) => {
-      v.id = i;
-    });
-     // 循环切换
+    // 循环切换
     this.isloop && this.loop()
   },
   methods : {
@@ -82,11 +81,13 @@ export default {
       this.timer = setInterval( ()=>{
         this.next()
       } , this.gap )
+
     },
     stop(){
       clearInterval( this.timer );
       this.timer = null;
     }
+
   }
 }
 </script>
@@ -121,6 +122,7 @@ export default {
         width: 100%;
         height: 100%;
         display: none;
+        transition: all .5s ease;
       }
     }
 

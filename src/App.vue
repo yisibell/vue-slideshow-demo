@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slideshow @jump="go"/>
+    <slideshow @jump="go" :data="imgList" :isloop="false" />
   </div>
 </template>
 
@@ -12,7 +12,8 @@ export default {
         {title: "1" , src: "./images/1.jpg"},
         {title: "2" , src: "./images/2.jpg"},
         {title: "3" , src: "./images/3.jpg"},
-        {title: "4" , src: "./images/4.jpg"}
+        {title: "4" , src: "./images/4.jpg"},
+        // {title: "5" , src: "./images/1.jpg"}
       ]
     }
   },
