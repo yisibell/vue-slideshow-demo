@@ -73,7 +73,8 @@ export default {
     return {}
   },
   methods: {
-    jumpTo(){
+    jumpTo(info){
+      // `info` is the data of current img
       // do somethig when you click the img ...
     }
   }
