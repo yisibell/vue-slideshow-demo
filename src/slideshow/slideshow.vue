@@ -7,8 +7,8 @@
     </ul>
   
     <!--小圆点 S-->
-    <ol :style="{ marginLeft : '-' + dots *12 / 2 + 'px' }">
-      <li v-for="(v,i) in dots" :key="i" :class="{ on : curr == i }" @click="clickDots(i)"></li>
+    <ol :style="{ marginLeft : '-' + dots * 40 / 2 + 'px' }">
+      <li v-for="(v,i) in dots" :key="i" :class="{ on : curr == i }" @mouseover="clickDots(i)"></li>
     </ol>
     
     <!--左右箭头 S-->
@@ -45,6 +45,10 @@ export default {
     isloop: {
       type: Boolean,
       default: true
+    },
+    gap: {
+      type: Number,
+      default: 2000
     }
     
   },
@@ -77,7 +81,7 @@ export default {
 
       this.timer = setInterval( ()=>{
         this.next()
-      } , 2000 )
+      } , this.gap )
     },
     stop(){
       clearInterval( this.timer );
@@ -127,12 +131,11 @@ export default {
       bottom: 20px;
       border-radius: 10px;
       li{
-        width: 12px;
-        height: 12px;
+        width: 30px;
+        height: 2px;
         background-color: #fff;
         float: left;
         margin: 2px 5px;
-        border-radius: 50%;
         cursor: pointer;
 
         &.on{
