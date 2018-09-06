@@ -1,6 +1,6 @@
 {
   "name": "vue-slideshows",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A slideshow component for vue.js",
   "main": "src/slideshow/index.js",
   "scripts": {

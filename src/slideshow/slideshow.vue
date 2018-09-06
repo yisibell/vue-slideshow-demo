@@ -77,10 +77,8 @@ export default {
       this.$emit('jump' , data)
     },
     loop(){
-
-      this.timer = setInterval( ()=>{
-        this.next()
-      } , this.interval )
+      this.timer && clearInterval( this.timer );
+      this.timer = setInterval( this.next , this.interval )
 
     },
     stop(){
