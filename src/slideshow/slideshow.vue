@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: "slideshow",
+  name: "AiSlideshow",
   data(){
     return {
       curr: 0,

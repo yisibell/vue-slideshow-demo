@@ -1,21 +1,24 @@
-# vue-slideshows
-a  slideshow component for vue.js 
+# @aidol/vue-slideshow
+
+a slideshow component for vue.js 
 
 ## Installation
+
 **Using npm**
 ``` bash
-npm install vue-slideshows --save
+npm install @aidol/vue-slideshow --save
 #or
-cnpm install vue-slideshows --save
+cnpm install @aidol/vue-slideshow --save
 ```
 
 ## Usage
+
 **In main.js**
 ``` js
 import Vue from 'vue'
-import slideShows from 'vue-slideshows'
+import AiSlideshow from '@aidol/vue-slideshow'
 
-Vue.use(slideShows)
+Vue.use(AiSlideshow)
 
 // new Vue({ //... })
 
@@ -24,7 +27,7 @@ Vue.use(slideShows)
 **In_.vue**
 
 ``` html
-<slideshow :data="imgList" @jump="jumpTo" />
+<ai-slideshow :data="imgList" @jump="jumpTo" />
 ```
 
 ``` js
@@ -64,11 +67,12 @@ export default {
 
 
 ## Events
+
 **@jump**
 > 点击某张图片时触发句柄
 
 ``` html
-<slideshow @jump="jumpTo" />
+<ai-slideshow @jump="jumpTo" />
 ```
 
 ``` js

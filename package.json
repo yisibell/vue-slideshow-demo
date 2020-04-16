@@ -1,5 +1,5 @@
 {
-  "name": "vue-slideshows",
+  "name": "@aidol/vue-slideshow",
   "version": "0.1.9",
   "description": "A slideshow component for vue.js",
   "main": "src/slideshow/index.js",
@@ -11,14 +11,15 @@
   "keywords": [
     "slideshow",
     "swiper",
-    "vue"
+    "vue",
+    "aidol"
   ],
   "repository":{
     "type": "git",
-    "url": "https://github.com/yisibell/vue-slideshows.git"
+    "url": "https://github.com/yisibell/vue-slideshow.git"
   },
   "bugs":{
-    "url": "https://github.com/yisibell/vue-slideshows/issues"
+    "url": "https://github.com/yisibell/vue-slideshow/issues"
   },
   "author": "elenh",
   "license": "MIT",
